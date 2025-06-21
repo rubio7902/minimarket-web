@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<!-- Este cambio fue realizado para la evaluación -->
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Minimarket Web</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -27,10 +26,54 @@
             <h2>Contacto</h2>
             <p>Encuéntranos en nuestra tienda física o llámanos para más información.</p>
         </section>
+
+        <section>
+            <h2>Formulario de Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required />
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required />
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required />
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Carrito de Compras</h2>
+            <div id="productos">
+                <div class="producto">
+                    <p>Manzanas - $1.000</p>
+                    <button onclick="agregarAlCarrito('Manzanas', 1000)">Agregar</button>
+                </div>
+                <div class="producto">
+                    <p>Pan - $500</p>
+                    <button onclick="agregarAlCarrito('Pan', 500)">Agregar</button>
+                </div>
+                <div class="producto">
+                    <p>Leche - $1.200</p>
+                    <button onclick="agregarAlCarrito('Leche', 1200)">Agregar</button>
+                </div>
+            </div>
+
+            <h3>Tu carrito:</h3>
+            <ul id="carrito"></ul>
+            <p><strong>Total:</strong> $<span id="total">0</span></p>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Minimarket Web - Todos los derechos reservados</p>
     </footer>
+
+    <!-- Enlace al archivo externo de JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,9 +1,11 @@
+/* Importación de la fuente Montserrat desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+/* Estilos generales del cuerpo de la página */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #FFFFFF; /* Fondo blanco */
-    color: #000000; /* Texto negro */
+    background-color: #FFFFFF;
+    color: #000000;
     margin: 0;
     padding: 0;
     display: flex;
@@ -11,41 +13,47 @@ body {
     align-items: center;
 }
 
+/* Encabezado principal del sitio (header) */
 header {
-    background-color: #00BFA6; /* Verde agua */
+    background-color: #00BFA6;
     width: 100%;
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
-    color: #FFFFFF; /* Texto blanco sobre fondo verde agua */
+    color: #FFFFFF;
     font-size: 28px;
 }
 
+/* Contenedor principal del contenido (main) */
 main {
     width: 80%;
     max-width: 900px;
-    background: #F5F5F5; /* Fondo gris claro */
+    background: #F5F5F5;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
 }
 
+/* Estilo para cada sección del contenido */
 section {
     margin-bottom: 20px;
 }
 
+/* Subtítulos de las secciones (h2) */
 h2 {
-    color: #00BFA6; /* Verde agua en los subtítulos */
+    color: #00BFA6;
 }
 
+/* Párrafos del contenido */
 p {
     font-size: 18px;
-    color: #000000; /* Texto negro */
+    color: #000000;
 }
 
+/* Pie de página del sitio (footer) */
 footer {
     background-color: #00BFA6;
     width: 100%;
@@ -53,4 +61,117 @@ footer {
     padding: 10px;
     margin-top: 20px;
     color: white;
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border: 2px solid #00BFA6;
+    border-radius: 10px;
+}
+
+form label {
+    font-weight: bold;
+    color: #00BFA6;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #CCCCCC;
+    border-radius: 5px;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+form button {
+    background-color: #00BFA6;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #009B85;
+}
+
+/* Estilos para la sección de productos del carrito */
+#productos {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.producto {
+    background: white;
+    padding: 10px;
+    border: 1px solid #00BFA6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+}
+
+.producto p {
+    margin: 0;
+}
+
+.producto button {
+    margin-left: 15px;
+    background-color: #00BFA6;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: #009B85;
+}
+
+/* Lista del carrito */
+#carrito {
+    list-style: none;
+    padding-left: 0;
+}
+
+#carrito li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón eliminar en el carrito */
+#carrito button {
+    margin-left: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#carrito button:hover {
+    background-color: darkred;
+}
+
+/* Total del carrito */
+#total {
+    font-weight: bold;
+    font-size: 20px;
 }
